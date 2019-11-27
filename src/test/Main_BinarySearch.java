@@ -6,16 +6,31 @@ import merge_sort.MergeSort_Recursive;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class Main_BinarySearch {
     private static int[] arr1000000;
+    private static int[] arr10000;
+    private static int[] arr100;
     private static MyTimer timer = new MyTimer();
 
     public static void main(String[] args) {
         readFile();
         mergeSortRecursive(arr1000000,1);
         timer.startTimer();
-        System.out.println(BinarySearch.binarySearch(arr1000000, 143));
+        System.out.println(BinarySearch.binarySearch(arr1000000, 14));
+        timer.stopTimer();
+        System.out.println("Binary search time: "+timer.getTime()+" nanoseconds");
+
+        mergeSortRecursive(arr10000,1);
+        timer.startTimer();
+        System.out.println(BinarySearch.binarySearch(arr10000, 14));
+        timer.stopTimer();
+        System.out.println("Binary search time: "+timer.getTime()+" nanoseconds");
+
+        mergeSortRecursive(arr100,1);
+        timer.startTimer();
+        System.out.println(BinarySearch.binarySearch(arr100, 1));
         timer.stopTimer();
         System.out.println("Binary search time: "+timer.getTime()+" nanoseconds");
     }
@@ -38,5 +53,7 @@ public class Main_BinarySearch {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        arr10000 = Arrays.copyOf(arr1000000, 10000);
+        arr100 = Arrays.copyOf(arr1000000, 100);
     }
 }
