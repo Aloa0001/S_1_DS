@@ -18,14 +18,34 @@ public class Main_InsertionSort {
         /**iterative insertin sort*/
         insertionSortIterative(arr100,1000000);
         insertionSortIterative(arr10000,10000);
-        insertionSortIterative(arr1000000,1);
+//        insertionSortIterative(arr1000000,1);// StackOverflow
         /**recursive insertion sort*/
         insertionSortRecursive(arr100,1000000);
         insertionSortRecursive(arr10000,10000);
-        insertionSortRecursive(arr1000000,1);
-       /* for (int x : arr10000){
+//        insertionSortRecursive(arr1000000,1);// StackOverflow
+        /**
+         * @author https://www.geeksforgeeks.org/insertion-sort/
+         * iterative
+         */
+        insertionSortIt(arr,10);
+        //InsertionSort.insertionSortRecursive(arr, arr.length);// StackOverflow Error
+        /*for (int x : arr){
             System.out.println(x);
         }*/
+    }
+    /**
+     * @author https://www.geeksforgeeks.org/insertion-sort/
+     * iterative
+     */
+    private static void insertionSortIt(int[] arr, int iterations){
+        MyTimer timer = new MyTimer();
+        timer.startTimer();
+        for (int i = 0; i < iterations; i++) {
+            InsertionSort.sort(arr);
+        }
+        timer.stopTimer();
+        System.out.println("Average time for iterative insertion sort, input "+arr.length+
+                " ,iterations: "+iterations+"/ is: "+timer.getTime()/iterations+" nanoseconds");
     }
     private static void insertionSortRecursive(Integer[] arr, int iterations){
         MyTimer timer = new MyTimer();
@@ -44,7 +64,7 @@ public class Main_InsertionSort {
             InsertionSort.insertionSortIterative(arr);
         }
         timer.stopTimer();
-        System.out.println("Average time for recursive insertion sort, input "+arr.length+
+        System.out.println("Average time for iterative insertion sort, input "+arr.length+
                 " ,iterations: "+iterations+"/ is: "+timer.getTime()/iterations+" nanoseconds");
     }
     /**
