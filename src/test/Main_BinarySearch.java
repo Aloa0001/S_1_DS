@@ -18,19 +18,19 @@ public class Main_BinarySearch {
         readFile();
         mergeSortRecursive(arr1000000,1);
         timer.startTimer();
-        System.out.println(BinarySearch.binarySearch(arr1000000, 14));
+        System.out.println(BinarySearch.binarySearch(arr1000000, 144));
         timer.stopTimer();
         System.out.println("Binary search time: "+timer.getTime()+" nanoseconds");
 
         mergeSortRecursive(arr10000,1);
         timer.startTimer();
-        System.out.println(BinarySearch.binarySearch(arr10000, 14));
+        System.out.println(BinarySearch.binarySearch(arr10000, 144));
         timer.stopTimer();
         System.out.println("Binary search time: "+timer.getTime()+" nanoseconds");
 
         mergeSortRecursive(arr100,1);
         timer.startTimer();
-        System.out.println(BinarySearch.binarySearch(arr100, 1));
+        System.out.println(BinarySearch.binarySearch(arr100, 144));
         timer.stopTimer();
         System.out.println("Binary search time: "+timer.getTime()+" nanoseconds");
     }
