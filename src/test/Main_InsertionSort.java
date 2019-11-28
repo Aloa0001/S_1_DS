@@ -28,7 +28,6 @@ public class Main_InsertionSort {
          * iterative
          */
         insertionSortIt(arr,10);
-        //InsertionSort.insertionSortRecursive(arr, arr.length);// StackOverflow Error
         /*for (int x : arr){
             System.out.println(x);
         }*/
