@@ -24,11 +24,11 @@ public class Main_Quicksort_Iterative {
        /**quick sort random pivot*/
         quickRandom(arr100,10000);
         quickRandom(arr10000,100);
-        quickRandom(arr1000000,3);
+        quickRandom(arr1000000,1);
         /**quick sort median pivot*/
         quickMedian(arr100,10000);
         quickMedian(arr10000,100);
-        quickMedian(arr1000000,3);
+        quickMedian(arr1000000,1);
         /*for (int x: arr1000000){
             System.out.println(x);
         }*/

@@ -18,7 +18,7 @@ public class Main_InsertionSort {
         /**iterative insertin sort*/
         insertionSortIterative(arr100,1000000);
         insertionSortIterative(arr10000,10000);
-//        insertionSortIterative(arr1000000,1);// StackOverflow
+        insertionSortIterative(arr1000000,1);// StackOverflow
         /**recursive insertion sort*/
         insertionSortRecursive(arr100,1000000);
         insertionSortRecursive(arr10000,10000);

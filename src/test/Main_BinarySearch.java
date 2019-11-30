@@ -18,21 +18,21 @@ public class Main_BinarySearch {
         readFile();
         mergeSortRecursive(arr1000000,1);
         timer.startTimer();
-        System.out.println(BinarySearch.binarySearch(arr1000000, 144));
+        System.out.println(BinarySearch.binarySearchRecursive(arr1000000, 144));
         timer.stopTimer();
-        System.out.println("Binary search time: "+timer.getTime()+" nanoseconds");
+        System.out.println("Recursive Binary search time: "+timer.getTime()+" nanoseconds");
 
         mergeSortRecursive(arr10000,1);
         timer.startTimer();
-        System.out.println(BinarySearch.binarySearch(arr10000, 144));
+        System.out.println(BinarySearch.binarySearchRecursive(arr10000, 144));
         timer.stopTimer();
-        System.out.println("Binary search time: "+timer.getTime()+" nanoseconds");
+        System.out.println("Recursive Binary search time: "+timer.getTime()+" nanoseconds");
 
         mergeSortRecursive(arr100,1);
         timer.startTimer();
-        System.out.println(BinarySearch.binarySearch(arr100, 144));
+        System.out.println(BinarySearch.binarySearchRecursive(arr100, 144));
         timer.stopTimer();
-        System.out.println("Binary search time: "+timer.getTime()+" nanoseconds");
+        System.out.println("Recursive Binary search time: "+timer.getTime()+" nanoseconds");
     }
     private static void mergeSortRecursive(int[] arr, int iterations){
         timer.startTimer();
