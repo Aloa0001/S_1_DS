@@ -20,7 +20,8 @@ public class Main_BinarySearch {
         runIterativeBinarySearch();
         runRecursiveBinarySearch();
     }
-        private static void runRecursiveBinarySearch(){
+
+    private static void runRecursiveBinarySearch() {
         /**  recursive binary search */
         mergeSortRecursive(arr1000000, 1);
         timer.startTimer();
@@ -40,27 +41,31 @@ public class Main_BinarySearch {
         timer.stopTimer();
         System.out.println("Recursive Binary search time: " + timer.getTime() + " nanoseconds");
     }
-/**  iterative binary search */
-private static void runIterativeBinarySearch(){
-        mergeSortRecursive(arr1000000,1);
+
+    /**
+     * iterative binary search
+     */
+    private static void runIterativeBinarySearch() {
+        mergeSortRecursive(arr1000000, 1);
         timer.startTimer();
         System.out.println(BinarySearch.binarySearchIterative(arr1000000, 144));
         timer.stopTimer();
-        System.out.println("Iterative Binary search time: "+timer.getTime()+" nanoseconds");
+        System.out.println("Iterative Binary search time: " + timer.getTime() + " nanoseconds");
 
-        mergeSortRecursive(arr10000,1);
+        mergeSortRecursive(arr10000, 1);
         timer.startTimer();
         System.out.println(BinarySearch.binarySearchIterative(arr10000, 144));
         timer.stopTimer();
-        System.out.println("Iterative Binary search time: "+timer.getTime()+" nanoseconds");
+        System.out.println("Iterative Binary search time: " + timer.getTime() + " nanoseconds");
 
-        mergeSortRecursive(arr100,1);
+        mergeSortRecursive(arr100, 1);
         timer.startTimer();
         System.out.println(BinarySearch.binarySearchIterative(arr100, 144));
         timer.stopTimer();
-        System.out.println("Iterative Binary search time: "+timer.getTime()+" nanoseconds");
+        System.out.println("Iterative Binary search time: " + timer.getTime() + " nanoseconds");
     }
-    private static void mergeSortIterative(int[] arr, int iterations){
+
+    private static void mergeSortIterative(int[] arr, int iterations) {
         timer.startTimer();
         for (int i = 0; i < iterations; i++) {
             MergeSort_Recursive.sortRecursive(arr, 0, arr.length - 1);
@@ -70,7 +75,7 @@ private static void runIterativeBinarySearch(){
 //                " ,iterations: "+iterations+"/ is: "+timer.getTime()/iterations+" nanoseconds");
     }
 
-    private static void mergeSortRecursive(int[] arr, int iterations){
+    private static void mergeSortRecursive(int[] arr, int iterations) {
         timer.startTimer();
         for (int i = 0; i < iterations; i++) {
             MergeSort_Recursive.sortRecursive(arr, 0, arr.length - 1);

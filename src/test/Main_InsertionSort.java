@@ -23,10 +23,6 @@ public class Main_InsertionSort {
         insertionSortRecursive(arr100,1000000);
         insertionSortRecursive(arr10000,10000);
 //        insertionSortRecursive(arr1000000,1);// StackOverflow
-        /**
-         * @author https://www.geeksforgeeks.org/insertion-sort/
-         * iterative
-         */
         insertionSortIt(arr,10);
         /*for (int x : arr){
             System.out.println(x);
