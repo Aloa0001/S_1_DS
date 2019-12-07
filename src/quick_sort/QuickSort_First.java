@@ -11,6 +11,7 @@ public class QuickSort_First {
         quickSort(array, 0, array.length - 1);// start the sort with the entire list
     }
 
+
     /**
      * used to sort partitions
      *
